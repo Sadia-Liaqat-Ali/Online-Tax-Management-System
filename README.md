@@ -5,7 +5,7 @@ A professional and fully-featured Tax Management System built to handle multiple
 ---
 
 ## ✨ Key Highlights  
-- 🔐 Role-Based Authentication – Separate access for Admins & Taxpayers.  
+- 🔐 Role-Based Authentication – Separate access for Admins & Taxpayers.   
 - 🗂 Multi-Tax Applications – Income Tax, Sales Tax, and Property Tax.  
 - ⚡ Automated Tax Calculation – Based on FBR Tax Slabs to ensure accuracy.  
 - 📄 Secure Document Processing – PDF validation and encrypted storage.  
