@@ -1,0 +1,132 @@
+  body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2C2E3A; /* Dark background */
+        }
+
+        /* Split Screen Layout */
+        .hero-section {
+            display: flex;
+            height: 100vh; /* Full-screen height */
+        }
+
+        /* Left side with text content */
+        .hero-left {
+            flex: 0 0 40%; /* Takes up 40% of the screen */
+            background-color: #2C2E3A; /* Light blue color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-size: 3em;
+            font-weight: bold;
+            color: darkorange;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a text shadow for better visibility */
+        }
+
+        .hero-description {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Button Styling */
+        .hero-btn {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: darkorange;
+            color: white;
+            font-size: 1.2em;
+            font-weight: 600;
+            border-radius: 50px;
+            border: 2px solid transparent;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            border: 2px solid #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* Right side with carousel */
+        .hero-right {
+            flex: 0 0 60%; /* Takes up 60% of the screen */
+            position: relative;
+            overflow: hidden; /* Ensures no images overflow */
+        }
+
+        /* Carousel Image Styling */
+        .carousel-item {
+            position: relative;
+            height: 100vh; /* Set to full viewport height */
+        }
+
+        /* Ensure the image fills the container */
+        .carousel-item img {
+            width: 100%; /* Make the image take the full width of the container */
+            height: 100%; /* Make the image take the full height of the container */
+            object-fit: cover; /* Ensure the image scales without stretching */
+        }
+
+        /* Caption Styling */
+        .carousel-caption h3 {
+            font-family: 'Arial', sans-serif;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white; /* White text for better contrast */
+            font-size: 2em; /* Large text */
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 15px;
+            border-radius: 10px;
+            width: 80%; /* Make the caption width 80% of the screen */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5em;
+            }
+
+            .hero-description {
+                font-size: 1.2em;
+            }
+
+            .hero-btn {
+                font-size: 1em;
+                padding: 12px 22px;
+            }
+
+            /* For smaller screens, stack the sections vertically */
+            .hero-section {
+                flex-direction: column;
+            }
+
+            .hero-left, .hero-right {
+                flex: none;
+                height: 50vh; /* 50% height for each section */
+            }
+
+            .carousel-caption {
+                font-size: 2em;
+                padding: 15px;
+            }
+        }
